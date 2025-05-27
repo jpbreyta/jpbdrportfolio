@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer - My Portfolio</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        .pdf-container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pdf-controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #pdf-viewer {
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #pdf-viewer canvas {
+            max-width: 100%;
+            height: auto;
+        }
+        .page-info {
+            text-align: center;
+            margin: 10px 0;
+            color: #666;
+        }
+        .download-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .download-btn:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">PDF Viewer</h1>
+                <div class="pdf-container">
+                    <div class="pdf-controls">
+                        <button id="prev-page" class="btn btn-primary">
+                            <i class="bi bi-chevron-left"></i> Previous
+                        </button>
+                        <button id="next-page" class="btn btn-primary">
+                            Next <i class="bi bi-chevron-right"></i>
+                        </button>
+                        <button id="zoom-in" class="btn btn-secondary">
+                            <i class="bi bi-zoom-in"></i>
+                        </button>
+                        <button id="zoom-out" class="btn btn-secondary">
+                            <i class="bi bi-zoom-out"></i>
+                        </button>
+                        <a href="assets/pdf/RESUME REYTA.pdf" download class="btn download-btn">
+                            <i class="bi bi-download"></i> Download PDF
+                        </a>
+                    </div>
+                    <div class="page-info">
+                        Page <span id="page-num">1</span> of <span id="page-count">0</span>
+                    </div>
+                    <div id="pdf-viewer"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/pdf-viewer.js"></script>
+</body>
+</html> 
