@@ -42,13 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //navigations
 
-fetch('includes/nav.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('nav-placeholder').innerHTML = data;
-});
-fetch('includes/footer.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
+// Load navigation and footer
+$(document).ready(function() {
+    // Load navigation
+    $("#nav-placeholder").load("includes/nav.html", function() {
+        // Set active nav link based on current page
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage || 
+                (currentPage === '' && linkPage === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Load footer
+    $("#footer-placeholder").load("includes/footer.html");
 });

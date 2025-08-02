@@ -1,25 +1,91 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
+        <a class="navbar-brand" href="index.html">
+            <span class="text-primary">JP</span>Reyta
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="project.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<style>
+    .navbar {
+        background-color: #343A40;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+    .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fff !important;
+    }
+    .navbar-brand .text-primary {
+        color: #0DCAF0 !important;
+    }
+    .nav-link {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color: #fff !important;
+        padding: 0.5rem 1rem !important;
+        transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+        color: #0DCAF0 !important;
+    }
+    .nav-link.active {
+        color: #0DCAF0 !important;
+    }
+    .navbar .btn-primary {
+        background-color: #0DCAF0;
+        border-color: #0DCAF0;
+        border-radius: 12px;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+    .navbar .btn-primary:hover {
+        background-color: #0bb8db;
+        border-color: #0bb8db;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
+    }
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            background-color: #343A40;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+        .navbar .btn-primary {
+            margin-top: 0.5rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
